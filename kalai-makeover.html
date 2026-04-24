@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalai Makeover – Best Bridal Makeup Artist in Kanchipuram, Tamil Nadu</title>
+  <meta name="description"
+    content="Kalai Makeover – Professional makeup artist & beauty parlour in Kanchipuram. Bridal, engagement & party makeup, saree pre-pleating. Call/WhatsApp 8870236006. Open to travel." />
+  <meta name="keywords"
+    content="makeup artist Kanchipuram, bridal makeup Kanchipuram, beauty parlour Kanchipuram, engagement makeup, party makeup, saree draping Kanchipuram, Kalai Makeover" />
+  <meta property="og:title" content="Kalai Makeover – Makeup Artist & Beauty Parlour, Kanchipuram" />
+  <meta property="og:description"
+    content="Professional makeup artist in Kanchipuram. Bridal, engagement & party looks. Book via WhatsApp: 8870236006." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: { DEFAULT: '#F2CBCB', light: '#FDF0F0', deep: '#D9A0A0' },
+            nude: { DEFAULT: '#C9A882', light: '#F5EDE0', dark: '#A07850' },
+            gold: { DEFAULT: '#C8A97E', light: '#EDD9B5', dark: '#9A7550' },
+            rose: { DEFAULT: '#9B5E6A', dark: '#6B3A44' },
+            cream: '#FAF6F1',
+            charcoal: '#2C2422',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['Jost', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --gold: #C8A97E;
+      --blush: #F2CBCB;
+      --rose: #9B5E6A;
+      --cream: #FAF6F1;
+      --charcoal: #2C2422;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+    }
+
+    /* ---- Noise texture overlay ---- */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ---- Gold divider ---- */
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .gold-line-v {
+      width: 1px;
+      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+    }
+
+    /* ---- Navbar ---- */
+    #navbar {
+      transition: all 0.4s ease;
+    }
+
+    #navbar.scrolled {
+      background: rgba(250, 246, 241, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 30px rgba(155, 94, 106, 0.08);
+    }
+
+    /* ---- Hero ---- */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(242, 203, 203, 0.45) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 20% 80%, rgba(200, 169, 126, 0.25) 0%, transparent 55%),
+        linear-gradient(160deg, #FDF0F0 0%, #FAF6F1 50%, #F5EDE0 100%);
+    }
+
+    /* ---- Floating ornament ---- */
+    .ornament {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 120px;
+      line-height: 1;
+      color: rgba(200, 169, 126, 0.12);
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ---- Section badge ---- */
+    .section-badge {
+      display: inline-block;
+      letter-spacing: 0.25em;
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(200, 169, 126, 0.4);
+      padding: 4px 14px;
+      border-radius: 100px;
+    }
+
+    /* ---- Portfolio cards ---- */
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .portfolio-card img {
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      width: 100%;
+      display: block;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.07);
+    }
+
+    .portfolio-card .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(44, 36, 34, 0.65) 0%, transparent 55%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: flex;
+      align-items: flex-end;
+      padding: 18px;
+    }
+
+    .portfolio-card:hover .overlay {
+      opacity: 1;
+    }
+
+    /* ---- Service card ---- */
+    .service-card {
+      background: linear-gradient(145deg, #fff8f4 0%, #fdf0f0 100%);
+      border: 1px solid rgba(200, 169, 126, 0.25);
+      border-radius: 20px;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blush), var(--gold), var(--blush));
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(155, 94, 106, 0.12);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-card.featured {
+      background: linear-gradient(145deg, #9B5E6A 0%, #7a4952 100%);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 20px 40px rgba(155, 94, 106, 0.3);
+    }
+
+    .service-card.featured::before {
+      opacity: 1;
+    }
+
+    /* ---- Testimonial ---- */
+    .testimonial-card {
+      background: linear-gradient(145deg, #fff 0%, #fdf8f5 100%);
+      border: 1px solid rgba(200, 169, 126, 0.2);
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(155, 94, 106, 0.1);
+    }
+
+    /* ---- WhatsApp float ---- */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      z-index: 999;
+      background: #25D366;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      animation: pulse-wa 2.5s infinite;
+      transition: transform 0.2s;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse-wa {
+
+      0%,
+      100% {
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 0 0 14px rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* ---- CTA buttons ---- */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #9B5E6A 0%, #7a4952 100%);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      padding: 14px 30px;
+      border-radius: 100px;
+      box-shadow: 0 8px 24px rgba(155, 94, 106, 0.3);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(155, 94, 106, 0.4);
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #C8A97E 0%, #9A7550 100%);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      padding: 14px 30px;
+      border-radius: 100px;
+      box-shadow: 0 8px 24px rgba(200, 169, 126, 0.35);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(200, 169, 126, 0.45);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid rgba(155, 94, 106, 0.5);
+      color: var(--rose);
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 13px 28px;
+      border-radius: 100px;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(155, 94, 106, 0.07);
+      border-color: var(--rose);
+      transform: translateY(-2px);
+    }
+
+    /* ---- Fade-in on scroll ---- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ---- Star ---- */
+    .star {
+      color: #E8A83A;
+    }
+
+    /* ---- About image frame ---- */
+    .about-frame {
+      position: relative;
+    }
+
+    .about-frame::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      right: 12px;
+      bottom: 12px;
+      border: 1.5px solid rgba(200, 169, 126, 0.45);
+      border-radius: 20px;
+      z-index: 0;
+    }
+
+    .about-frame img {
+      position: relative;
+      z-index: 1;
+      border-radius: 16px;
+    }
+
+    /* ---- Scroll indicator ---- */
+    @keyframes bounce-arrow {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(8px);
+      }
+    }
+
+    .bounce {
+      animation: bounce-arrow 1.8s infinite;
+    }
+
+    /* Mobile nav */
+    #mobile-menu {
+      display: none;
+    }
+
+    #mobile-menu.open {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==============================
+     FLOATING WHATSAPP
+=============================== -->
+  <a href="https://wa.me/918870236006?text=Hi%20Kalai%20Makeover!%20I'd%20like%20to%20book%20a%20makeup%20appointment."
+    target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- ==============================
+     NAVBAR
+=============================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="flex flex-col leading-none">
+        <span class="font-display text-2xl font-light tracking-widest text-charcoal"
+          style="letter-spacing:0.18em;">KALAI</span>
+        <span class="font-body text-[9px] tracking-[0.38em] text-gold-dark font-medium uppercase"
+          style="margin-top:-2px;">MAKEOVER</span>
+      </a>
+      <!-- Desktop links -->
+      <ul class="hidden md:flex gap-8 font-body text-sm tracking-widest font-light text-charcoal/80">
+        <li><a href="#portfolio" class="hover:text-rose transition-colors">Portfolio</a></li>
+        <li><a href="#services" class="hover:text-rose transition-colors">Services</a></li>
+        <li><a href="#testimonials" class="hover:text-rose transition-colors">Reviews</a></li>
+        <li><a href="#about" class="hover:text-rose transition-colors">About</a></li>
+        <li><a href="#contact" class="hover:text-rose transition-colors">Contact</a></li>
+      </ul>
+      <!-- Desktop CTA -->
+      <a href="https://wa.me/918870236006?text=Hi!%20I'd%20like%20to%20book%20a%20session." target="_blank"
+        class="hidden md:inline-flex btn-primary text-xs px-5 py-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Book Now
+      </a>
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-[5px] p-1" aria-label="Menu">
+        <span class="w-6 h-[1.5px] bg-charcoal block transition-all" id="bar1"></span>
+        <span class="w-6 h-[1.5px] bg-charcoal block transition-all" id="bar2"></span>
+        <span class="w-4 h-[1.5px] bg-charcoal block transition-all" id="bar3"></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-cream/98 backdrop-blur border-t border-gold/20 px-6 pb-6 pt-4">
+      <ul class="flex flex-col gap-5 font-body text-sm tracking-widest text-charcoal/80">
+        <li><a href="#portfolio" class="mobile-link hover:text-rose transition-colors block">Portfolio</a></li>
+        <li><a href="#services" class="mobile-link hover:text-rose transition-colors block">Services</a></li>
+        <li><a href="#testimonials" class="mobile-link hover:text-rose transition-colors block">Reviews</a></li>
+        <li><a href="#about" class="mobile-link hover:text-rose transition-colors block">About</a></li>
+        <li><a href="#contact" class="mobile-link hover:text-rose transition-colors block">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/918870236006?text=Hi!%20I'd%20like%20to%20book%20a%20session." target="_blank"
+        class="btn-primary mt-6 text-xs justify-center w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Book on WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==============================
+     HERO
+=============================== -->
+  <section id="hero" class="hero-bg min-h-screen flex flex-col justify-center relative overflow-hidden pt-24 pb-16">
+    <!-- Background ornaments -->
+    <span class="ornament top-16 right-8 hidden lg:block select-none">✦</span>
+    <span class="ornament bottom-10 left-4 text-7xl hidden lg:block select-none">✦</span>
+
+    <!-- Decorative blobs -->
+    <div
+      style="position:absolute;top:10%;right:5%;width:320px;height:320px;border-radius:50%;background:radial-gradient(ellipse,rgba(242,203,203,0.5),transparent 70%);pointer-events:none;">
+    </div>
+    <div
+      style="position:absolute;bottom:15%;left:3%;width:240px;height:240px;border-radius:50%;background:radial-gradient(ellipse,rgba(200,169,126,0.22),transparent 70%);pointer-events:none;">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text -->
+      <div class="text-center md:text-left">
+        <span class="section-badge mb-6 inline-block">✦ Kanchipuram's Trusted Beauty Artist ✦</span>
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-charcoal mb-4">
+          Your Most <br />
+          <em class="not-italic" style="color:#9B5E6A;">Beautiful</em><br />
+          Moment Awaits
+        </h1>
+        <p
+          class="font-body font-light text-charcoal/65 text-base md:text-lg max-w-md mx-auto md:mx-0 mb-8 leading-relaxed">
+          Professional makeup artist & beauty parlour in Kanchipuram — bridal, engagement & party looks crafted to last
+          all day. Open to travel across Tamil Nadu.
+        </p>
+        <!-- Stats row -->
+        <div class="flex justify-center md:justify-start gap-8 mb-10">
+          <div class="text-center">
+            <p class="font-display text-3xl font-semibold" style="color:#9B5E6A;">376+</p>
+            <p class="font-body text-xs tracking-widest text-charcoal/55 uppercase">Posts</p>
+          </div>
+          <div class="gold-line-v self-stretch mx-2"></div>
+          <div class="text-center">
+            <p class="font-display text-3xl font-semibold" style="color:#9B5E6A;">1.6K</p>
+            <p class="font-body text-xs tracking-widest text-charcoal/55 uppercase">Followers</p>
+          </div>
+          <div class="gold-line-v self-stretch mx-2"></div>
+          <div class="text-center">
+            <p class="font-display text-3xl font-semibold" style="color:#9B5E6A;">Travel</p>
+            <p class="font-body text-xs tracking-widest text-charcoal/55 uppercase">Friendly</p>
+          </div>
+        </div>
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="https://wa.me/918870236006?text=Hi%20Kalai!%20I%20want%20to%20book%20a%20bridal%20makeup%20session."
+            target="_blank" class="btn-primary text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="white" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Book via WhatsApp
+          </a>
+          <a href="#portfolio" class="btn-outline text-sm">
+            View Portfolio
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor"
+              stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- Hero image collage -->
+      <div class="relative flex justify-center md:justify-end">
+        <div class="relative w-[300px] md:w-[360px]">
+          <!-- Main image -->
+          <div class="rounded-2xl overflow-hidden shadow-2xl" style="box-shadow:0 32px 64px rgba(155,94,106,0.2);">
+            <img src="assets/portfolio-1.jpeg" alt="Bridal Makeup by Kalai Makeover" class="w-full object-cover"
+              style="height:420px;object-position:top;" />
+          </div>
+          <!-- Floating badge -->
+          <div
+            class="absolute -bottom-5 -left-8 bg-white rounded-2xl shadow-xl px-5 py-3 border border-gold/20 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center"
+              style="background:linear-gradient(135deg,#F2CBCB,#C8A97E);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-body text-xs font-semibold text-charcoal">Top Rated Artist</p>
+              <p class="font-body text-[10px] text-charcoal/55">★★★★★ 4.9 / 5.0</p>
+            </div>
+          </div>
+          <!-- Small accent image -->
+          <div
+            class="absolute -top-6 -right-6 w-28 h-28 rounded-xl overflow-hidden shadow-lg border-2 border-white hidden md:block">
+            <img src="assets/IMG_5779.JPG.jpeg" 
+              alt="Makeup detail" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scroll cue -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 bounce">
+      <p class="font-body text-[9px] tracking-[0.3em] text-charcoal/40 uppercase">Scroll</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#C8A97E" stroke-width="1.5"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ==============================
+     PORTFOLIO
+=============================== -->
+  <section id="portfolio" class="py-20 md:py-28 bg-cream relative">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14 reveal">
+        <span class="section-badge mb-4">Our Work</span>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-charcoal mt-3">Transformations That <em
+            style="color:#9B5E6A;">Speak</em></h2>
+        <p class="font-body text-charcoal/55 font-light mt-3 max-w-xl mx-auto text-sm leading-relaxed">
+          Every look is a story — crafted with precision, artistry, and love.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+        <!-- Card 1 – tall -->
+        <div class="portfolio-card row-span-2 reveal" style="height:100%;">
+          <img
+            src="assets/WhatsApp%20Image%202026-04-22%20at%201.45.52%20PM.jpeg"
+            alt="Bridal Makeup" style="height:100%;min-height:340px;object-fit:cover;" />
+          <div class="overlay">
+            <span class="font-body text-white text-xs tracking-widest uppercase">Bridal Look</span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="portfolio-card reveal">
+          <img src="assets/IMG_5779.JPG.jpeg"
+            alt="Makeup Detail" style="height:200px;object-fit:cover;" />
+          <div class="overlay">
+            <span class="font-body text-white text-xs tracking-widest uppercase">Makeup Detail</span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="portfolio-card reveal">
+          <img src="assets/WhatsApp%20Image%202026-04-22%20at%201.45.57%20PM.jpeg"
+            alt="Engagement Look" style="height:200px;object-fit:cover;" />
+          <div class="overlay">
+            <span class="font-body text-white text-xs tracking-widest uppercase">Engagement</span>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="portfolio-card reveal">
+          <img src="assets/WhatsApp%20Image%202026-04-23%20at%209.54.09%20PM.jpeg"
+            alt="Party Makeup" style="height:200px;object-fit:cover;" />
+          <div class="overlay">
+            <span class="font-body text-white text-xs tracking-widest uppercase">Party Look</span>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="portfolio-card reveal">
+          <img src="assets/kalai-profile.jpeg"
+            alt="Studio Session" style="height:200px;object-fit:cover;" />
+          <div class="overlay">
+            <span class="font-body text-white text-xs tracking-widest uppercase">Studio Session</span>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="portfolio-card md:col-span-2 reveal">
+          <img src="assets/WhatsApp%20Image%202026-04-24%20at%2011.34.21%20PM.jpeg"
+            alt="Reception Makeup" style="height:220px;object-fit:cover;object-position:top;" />
+          <div class="overlay">
+            <span class="font-body text-white text-xs tracking-widest uppercase">Reception Look</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="https://www.instagram.com/kalaimakeover" target="_blank" class="btn-outline text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+            stroke-width="1.5" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          See More on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ==============================
+     SERVICES
+=============================== -->
+  <section id="services" class="py-20 md:py-28 relative overflow-hidden"
+    style="background:linear-gradient(160deg,#FDF0F0 0%,#FAF6F1 60%,#F5EDE0 100%);">
+    <!-- Big ornament -->
+    <span class="ornament top-0 right-0 text-[200px] opacity-50 hidden md:block">✦</span>
+
+    <div class="max-w-6xl mx-auto px-5 relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="section-badge mb-4">Services & Pricing</span>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-charcoal mt-3">Choose Your <em
+            style="color:#9B5E6A;">Experience</em></h2>
+        <p class="font-body text-charcoal/55 font-light mt-3 max-w-lg mx-auto text-sm leading-relaxed">
+          Premium packages designed for every beautiful occasion. All prices inclusive of a touch-up kit.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Bridal -->
+        <div class="service-card featured reveal">
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5"
+              style="background:rgba(255,255,255,0.15);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="rgba(255,255,255,0.9)"
+                stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </div>
+            <div
+              class="inline-block bg-white/20 rounded-full px-3 py-1 text-[9px] tracking-widest text-white/80 uppercase mb-4">
+              Most Popular</div>
+            <h3 class="font-display text-2xl font-light text-white mb-2">Bridal Makeup</h3>
+            <p class="font-body text-white/65 text-xs leading-relaxed mb-6">Full bridal look with HD & airbrush finish.
+              Includes hair styling, saree draping & touch-up kit.</p>
+            <div class="mb-6">
+              <span class="font-display text-4xl font-light text-white">₹7,000</span>
+              <span class="text-white/55 text-xs ml-1">onwards</span>
+            </div>
+            <ul class="space-y-2 mb-7">
+              <li class="flex items-center gap-2 text-white/75 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="rgba(255,255,255,0.7)"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> HD / Airbrush Finish</li>
+              <li class="flex items-center gap-2 text-white/75 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="rgba(255,255,255,0.7)"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Bridal Hair Styling</li>
+              <li class="flex items-center gap-2 text-white/75 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="rgba(255,255,255,0.7)"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Lashes Included</li>
+              <li class="flex items-center gap-2 text-white/75 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="rgba(255,255,255,0.7)"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Touch-up Kit</li>
+            </ul>
+            <a href="https://wa.me/918870236006?text=Hi!%20I%20want%20to%20book%20Bridal%20Makeup." target="_blank"
+              class="block text-center bg-white text-rose font-body font-medium text-xs tracking-wider py-3 rounded-full hover:bg-blush-light transition-colors">
+              Book Now
+            </a>
+          </div>
+        </div>
+        <!-- Engagement -->
+        <div class="service-card reveal">
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5"
+              style="background:linear-gradient(135deg,#F2CBCB,#EDD9B5);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#9B5E6A"
+                stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl font-light text-charcoal mb-2">Engagement</h3>
+            <p class="font-body text-charcoal/55 text-xs leading-relaxed mb-6">Glowing, camera-ready look for your
+              special ring ceremony. Elegant and long-lasting.</p>
+            <div class="mb-6">
+              <span class="font-display text-4xl font-light" style="color:#9B5E6A;">₹5,000</span>
+              <span class="text-charcoal/40 text-xs ml-1">onwards</span>
+            </div>
+            <ul class="space-y-2 mb-7">
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> HD Makeup</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Hair Setting</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Premium Products</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Touch-up Kit</li>
+            </ul>
+            <a href="https://wa.me/918870236006?text=Hi!%20I%20want%20to%20book%20Engagement%20Makeup." target="_blank"
+              class="block text-center border border-rose/30 text-rose font-body font-medium text-xs tracking-wider py-3 rounded-full hover:bg-blush-light transition-colors">
+              Book Now
+            </a>
+          </div>
+        </div>
+        <!-- Party -->
+        <div class="service-card reveal">
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5"
+              style="background:linear-gradient(135deg,#EDD9B5,#F2CBCB);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#9A7550"
+                stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl font-light text-charcoal mb-2">Party Makeup</h3>
+            <p class="font-body text-charcoal/55 text-xs leading-relaxed mb-6">Bold, vibrant looks for sangeet, mehndi,
+              receptions and all your festive celebrations.</p>
+            <div class="mb-6">
+              <span class="font-display text-4xl font-light" style="color:#9B5E6A;">₹3,000</span>
+              <span class="text-charcoal/40 text-xs ml-1">onwards</span>
+            </div>
+            <ul class="space-y-2 mb-7">
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Full Face Makeup</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Hair Styling</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Eye Art Options</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Long-Lasting Formula</li>
+            </ul>
+            <a href="https://wa.me/918870236006?text=Hi!%20I%20want%20to%20book%20Party%20Makeup." target="_blank"
+              class="block text-center border border-rose/30 text-rose font-body font-medium text-xs tracking-wider py-3 rounded-full hover:bg-blush-light transition-colors">
+              Book Now
+            </a>
+          </div>
+        </div>
+        <!-- Saree Draping -->
+        <div class="service-card reveal">
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5"
+              style="background:linear-gradient(135deg,#D9A0A0,#C8A97E);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="white"
+                stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl font-light text-charcoal mb-2">Saree Draping</h3>
+            <p class="font-body text-charcoal/55 text-xs leading-relaxed mb-6">Expert draping in Nauvari, Gujarati, Nivi
+              & Tamil styles. Pin-perfect and elegant all day long.</p>
+            <div class="mb-6">
+              <span class="font-display text-4xl font-light" style="color:#9B5E6A;">₹500</span>
+              <span class="text-charcoal/40 text-xs ml-1">onwards</span>
+            </div>
+            <ul class="space-y-2 mb-7">
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> 10+ Draping Styles</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Pin & Tuck Finish</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Blouse Pinning</li>
+              <li class="flex items-center gap-2 text-charcoal/60 text-xs font-body"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="#C8A97E"
+                  stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Quick & Neat Finish</li>
+            </ul>
+            <a href="https://wa.me/918870236006?text=Hi!%20I%20want%20to%20book%20Saree%20Draping." target="_blank"
+              class="block text-center border border-rose/30 text-rose font-body font-medium text-xs tracking-wider py-3 rounded-full hover:bg-blush-light transition-colors">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saree Pre-Pleating callout -->
+      <div
+        class="mt-6 rounded-2xl border border-gold/25 bg-white/60 p-5 flex flex-col sm:flex-row items-center gap-4 reveal">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+          style="background:linear-gradient(135deg,#F2CBCB,#EDD9B5);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#9B5E6A" stroke-width="1.5"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+          </svg>
+        </div>
+        <div class="text-center sm:text-left">
+          <p class="font-body font-medium text-sm text-charcoal">Saree Pre-Pleating also available!</p>
+          <p class="font-body text-xs text-charcoal/50 mt-1">In collaboration with <a
+              href="https://www.instagram.com/kanchi_sareedrapist" target="_blank"
+              class="text-rose hover:underline font-medium">@kanchi_sareedrapist</a> — expert Kanchipuram saree draping
+            specialists.</p>
+        </div>
+      </div>
+
+      <!-- Note -->
+      <p class="text-center font-body text-xs text-charcoal/40 mt-4 reveal">
+        * All bookings confirmed via WhatsApp · 📍 Based in Kanchipuram · Open to travel across Tamil Nadu
+      </p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ==============================
+     TESTIMONIALS
+=============================== -->
+  <section id="testimonials" class="py-20 md:py-28 bg-cream">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14 reveal">
+        <span class="section-badge mb-4">Happy Brides</span>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-charcoal mt-3">What They <em
+            style="color:#9B5E6A;">Say</em></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- T1 -->
+        <div class="testimonial-card p-7 reveal">
+          <div class="flex gap-1 mb-4">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="font-display text-lg font-light text-charcoal/80 italic leading-relaxed mb-6">
+            "Kalai made me look like an absolute dream on my wedding day. The makeup lasted through all the ceremonies
+            and tears! She is simply the best in Chennai."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center font-display text-white font-semibold text-sm"
+              style="background:linear-gradient(135deg,#9B5E6A,#C8A97E);">P</div>
+            <div>
+              <p class="font-body font-medium text-sm text-charcoal">Priya Rajan</p>
+              <p class="font-body text-xs text-charcoal/45">Bridal Makeup · December 2024</p>
+            </div>
+          </div>
+        </div>
+        <!-- T2 – featured -->
+        <div class="testimonial-card p-7 reveal"
+          style="border-color:rgba(200,169,126,0.4);box-shadow:0 20px 50px rgba(155,94,106,0.1);">
+          <div class="flex gap-1 mb-4">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="font-display text-lg font-light text-charcoal/80 italic leading-relaxed mb-6">
+            "I was so nervous before my engagement but Kalai aunty calmed me down and made me glow. The saree draping
+            was so neat. Highly recommended to every bride-to-be!"
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center font-display text-white font-semibold text-sm"
+              style="background:linear-gradient(135deg,#C8A97E,#9B5E6A);">A</div>
+            <div>
+              <p class="font-body font-medium text-sm text-charcoal">Aishwarya Murali</p>
+              <p class="font-body text-xs text-charcoal/45">Engagement Makeup · January 2025</p>
+            </div>
+          </div>
+        </div>
+        <!-- T3 -->
+        <div class="testimonial-card p-7 reveal">
+          <div class="flex gap-1 mb-4">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="font-display text-lg font-light text-charcoal/80 italic leading-relaxed mb-6">
+            "Got party makeup for my sister's reception. The HD look was flawless in every photo. Kalai Makeover is
+            worth every rupee — book her before she gets booked out!"
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center font-display text-white font-semibold text-sm"
+              style="background:linear-gradient(135deg,#D9A0A0,#C8A97E);">D</div>
+            <div>
+              <p class="font-body font-medium text-sm text-charcoal">Divya Krishnan</p>
+              <p class="font-body text-xs text-charcoal/45">Party Makeup · February 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating banner -->
+      <div class="mt-12 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 reveal"
+        style="background:linear-gradient(135deg,#9B5E6A,#7a4952);box-shadow:0 20px 48px rgba(155,94,106,0.25);">
+        <div class="text-center sm:text-left">
+          <p class="font-display text-5xl text-white font-light">4.9 <span class="star text-3xl">★</span></p>
+          <p class="font-body text-white/60 text-sm mt-1">Average Rating across 200+ reviews</p>
+        </div>
+        <div class="gold-line-v self-stretch hidden sm:block" style="background:rgba(255,255,255,0.2);"></div>
+        <div class="text-center">
+          <p class="font-display text-5xl text-white font-light">376<span class="text-2xl">+</span></p>
+          <p class="font-body text-white/60 text-sm mt-1">Portfolio Posts on Instagram</p>
+        </div>
+        <div class="gold-line-v self-stretch hidden sm:block" style="background:rgba(255,255,255,0.2);"></div>
+        <a href="https://wa.me/918870236006?text=Hi!%20I%20saw%20your%20reviews%20and%20want%20to%20book."
+          target="_blank" class="btn-gold text-sm whitespace-nowrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Book Your Slot
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ==============================
+     ABOUT
+=============================== -->
+  <section id="about" class="py-20 md:py-28" style="background:linear-gradient(160deg,#F5EDE0 0%,#FAF6F1 100%);">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-16 items-center">
+      <!-- Image -->
+      <div class="about-frame reveal order-2 md:order-1">
+        <img src="assets/kalai-owner.jpeg" alt="Kalai – Makeup Artist" class="w-full shadow-lg"
+          style="aspect-ratio: 4/5; object-fit: cover; object-position: top center; max-height: 520px; border-radius: 16px;" />
+        <!-- Badge -->
+        <div
+          class="absolute -right-4 bottom-10 z-10 bg-white rounded-2xl shadow-xl px-5 py-3 border border-gold/20 hidden md:block">
+          <p class="font-display text-2xl font-light" style="color:#9B5E6A;">8+ Years</p>
+          <p class="font-body text-xs text-charcoal/50 tracking-widest uppercase">Of Artistry</p>
+        </div>
+      </div>
+      <!-- Text -->
+      <div class="order-1 md:order-2 reveal">
+        <span class="section-badge mb-5">About Kalai</span>
+        <h2 class="font-display text-4xl md:text-5xl font-light text-charcoal mt-3 leading-tight">
+          Art That Makes <br /><em style="color:#9B5E6A;">You Shine</em>
+        </h2>
+        <div class="gold-line my-6" style="width:80px;height:1px;"></div>
+        <p class="font-body text-charcoal/65 font-light leading-relaxed mb-4 text-sm">
+          Hi, I'm <strong class="font-medium text-charcoal">Kalai</strong> — a certified professional makeup artist and
+          beauty parlour owner based in <strong class="font-medium text-charcoal">Kanchipuram, Tamil Nadu</strong>. With
+          hundreds of looks and 376+ portfolio posts, I've built a reputation for artistry that speaks for itself.
+        </p>
+        <p class="font-body text-charcoal/65 font-light leading-relaxed mb-8 text-sm">
+          From grand bridal transformations to elegant party looks, every client gets my full dedication. I'm also open
+          to <strong class="font-medium text-charcoal">travel</strong> — so wherever your celebration is, I can be
+          there. For saree pre-pleating, I collaborate with the experts at <strong
+            class="font-medium text-charcoal">@kanchi_sareedrapist</strong>.
+        </p>
+        <!-- Highlights -->
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="bg-white rounded-xl p-4 border border-gold/15">
+            <p class="font-display text-2xl font-light" style="color:#9B5E6A;">Pro Artist</p>
+            <p class="font-body text-xs text-charcoal/50 mt-1">Certified & experienced</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 border border-gold/15">
+            <p class="font-display text-2xl font-light" style="color:#9B5E6A;">Travels</p>
+            <p class="font-body text-xs text-charcoal/50 mt-1">Across Tamil Nadu</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 border border-gold/15 col-span-2">
+            <p class="font-display text-xl font-light" style="color:#9B5E6A;">📍 Kanchipuram-based</p>
+            <p class="font-body text-xs text-charcoal/50 mt-1">Beauty parlour + home visits available</p>
+          </div>
+        </div>
+        <a href="https://wa.me/918870236006?text=Hi%20Kalai!%20I%20want%20to%20know%20more%20about%20your%20services."
+          target="_blank" class="btn-primary text-sm">
+          Chat with Kalai
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="white" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ==============================
+     CONTACT
+=============================== -->
+  <section id="contact" class="py-20 md:py-28 relative overflow-hidden"
+    style="background:linear-gradient(160deg,#FDF0F0,#FAF6F1);">
+    <span class="ornament bottom-0 right-0 text-[180px] hidden md:block">✦</span>
+
+    <div class="max-w-4xl mx-auto px-5 text-center relative z-10">
+      <span class="section-badge mb-5 reveal">Get in Touch</span>
+      <h2 class="font-display text-4xl md:text-5xl font-light text-charcoal mt-3 mb-4 reveal">
+        Ready for Your <em style="color:#9B5E6A;">Glow Up?</em>
+      </h2>
+      <p class="font-body text-charcoal/55 font-light text-sm max-w-md mx-auto mb-12 reveal">
+        Reach out via WhatsApp for the fastest response. Bookings fill up fast — especially during wedding season!
+      </p>
+
+      <!-- Contact cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/918870236006" target="_blank"
+          class="group bg-white rounded-2xl p-6 border border-gold/20 hover:border-rose/30 hover:shadow-xl transition-all reveal flex flex-col items-center gap-3">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center" style="background:#25D366;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+          </div>
+          <p class="font-body font-medium text-sm text-charcoal">WhatsApp</p>
+          <p class="font-body text-xs text-charcoal/50">+91 88702 36006</p>
+          <span class="font-body text-xs text-emerald-600 tracking-wider mt-1">↗ Chat Now</span>
+        </a>
+        <!-- Phone -->
+        <a href="tel:+918870236006"
+          class="group bg-white rounded-2xl p-6 border border-gold/20 hover:border-rose/30 hover:shadow-xl transition-all reveal flex flex-col items-center gap-3">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center"
+            style="background:linear-gradient(135deg,#9B5E6A,#7a4952);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="white" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+          </div>
+          <p class="font-body font-medium text-sm text-charcoal">Phone Call</p>
+          <p class="font-body text-xs text-charcoal/50">+91 88702 36006</p>
+          <span class="font-body text-xs" style="color:#9B5E6A;">↗ Call Now</span>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/kalaimakeover" target="_blank"
+          class="group bg-white rounded-2xl p-6 border border-gold/20 hover:border-rose/30 hover:shadow-xl transition-all reveal flex flex-col items-center gap-3">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center"
+            style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </div>
+          <p class="font-body font-medium text-sm text-charcoal">Instagram</p>
+          <p class="font-body text-xs text-charcoal/50">@kalaimakeover</p>
+          <span class="font-body text-xs text-pink-500">↗ Follow Us</span>
+        </a>
+        <!-- YouTube -->
+        <a href="https://youtube.com/@kalaimakeover" target="_blank"
+          class="group bg-white rounded-2xl p-6 border border-gold/20 hover:border-rose/30 hover:shadow-xl transition-all reveal flex flex-col items-center gap-3">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center"
+            style="background:#FF0000;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+            </svg>
+          </div>
+          <p class="font-body font-medium text-sm text-charcoal">YouTube</p>
+          <p class="font-body text-xs text-charcoal/50">Kalai Makeover</p>
+          <span class="font-body text-xs text-red-600">↗ Subscribe</span>
+        </a>
+      </div>
+
+      <!-- Big WhatsApp CTA -->
+      <a href="https://wa.me/918870236006?text=Hi%20Kalai!%20I%20want%20to%20book%20a%20makeup%20appointment.%20Please%20share%20available%20dates."
+        target="_blank" class="btn-primary text-base px-10 py-5 reveal mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Book Your Appointment on WhatsApp
+      </a>
+      <p class="font-body text-xs text-charcoal/35 mt-4 reveal">Usually replies within 1 hour · 📍 Kanchipuram, Tamil
+        Nadu · Open to travel</p>
+    </div>
+  </section>
+
+  <!-- ==============================
+     FOOTER
+=============================== -->
+  <footer style="background:#2C2422;" class="py-10">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <p class="font-display text-2xl text-white font-light tracking-widest" style="letter-spacing:0.18em;">KALAI
+          MAKEOVER</p>
+        <p class="font-body text-xs text-white/35 tracking-widest mt-1">Professional Makeup Artist & Beauty Parlour ·
+          Kanchipuram, Tamil Nadu</p>
+      </div>
+      <div class="gold-line" style="width:1px;height:40px;display:none;" class="md:block"></div>
+      <div class="flex flex-wrap items-center justify-center gap-6 font-body text-xs text-white/45 tracking-widest">
+        <a href="#portfolio" class="hover:text-white/80 transition-colors">Portfolio</a>
+        <a href="#services" class="hover:text-white/80 transition-colors">Services</a>
+        <a href="#about" class="hover:text-white/80 transition-colors">About</a>
+        <a href="#contact" class="hover:text-white/80 transition-colors">Contact</a>
+        <a href="https://youtube.com/@kalaimakeover" target="_blank" class="hover:text-white/80 transition-colors hidden md:inline-block">YouTube</a>
+      </div>
+      <p class="font-body text-[10px] text-white/25 tracking-wider">© 2025 Kalai Makeover. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ==============================
+     JAVASCRIPT
+=============================== -->
+  <script>
+    // Sticky navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    let menuOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('open', menuOpen);
+      bar1.style.transform = menuOpen ? 'translateY(6.5px) rotate(45deg)' : '';
+      bar2.style.opacity = menuOpen ? '0' : '1';
+      bar3.style.transform = menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : '';
+      bar3.style.width = menuOpen ? '24px' : '16px';
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+        bar1.style.transform = bar2.style.opacity = bar3.style.transform = '';
+        bar3.style.width = '16px';
+      });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
