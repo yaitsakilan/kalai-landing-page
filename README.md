@@ -2,7 +2,7 @@
 
 A premium, responsive landing page for **Kalai Makeover**, a professional makeup artist and beauty parlour based in Kanchipuram, Tamil Nadu.
 
-![Kalai Makeover Preview](assets/portfolio-1.jpeg)
+
 
 ## ✨ Overview
 
